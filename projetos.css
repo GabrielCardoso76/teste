@@ -1,0 +1,117 @@
+.projects-main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #1B407C;
+    margin-bottom: 40px;
+    align-self: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+.project-viewer {
+    flex: 2;
+    background-color: #1B407C;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.project-display {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.project-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-nav button:hover {
+    transform: scale(1.2);
+}
+
+.project-nav span {
+    font-size: 1.2rem;
+}
+
+.portfolio-list-card {
+    flex: 1;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-list-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1B407C;
+    text-align: center;
+}
+
+#portfolio-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#portfolio-items li {
+    padding: 15px 10px;
+    border-bottom: 2px solid #D3D3D3;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+    color: #1B407C;
+}
+
+#portfolio-items li:last-child {
+    border-bottom: none;
+}
+
+#portfolio-items li:hover {
+    background-color: #f0f0f0;
+}
+
+#portfolio-items li.active {
+    font-weight: bold;
+}

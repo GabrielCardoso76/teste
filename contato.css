@@ -1,0 +1,91 @@
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-container {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.contact-section, .social-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s forwards;
+}
+
+.contact-section {
+    animation-delay: 0.2s;
+}
+
+.social-section {
+    animation-delay: 0.4s;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1B407C;
+}
+
+.contact-info p, .social-links p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info span, .social-links span {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+.social-links i {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    width: 25px;
+    text-align: center;
+}
+
+a {
+    color: #1B407C;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2a5dab;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
