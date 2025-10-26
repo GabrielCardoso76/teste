@@ -51,6 +51,19 @@ header {
     height: 2px;
     background-color: white;
     margin: 3px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .logo {
@@ -63,8 +76,15 @@ header {
 
 .logo .char {
     display: inline-block;
-    transition: transform 0.5s, color 0.5s;
+    animation: bounceIn 1s forwards;
+    opacity: 0;
 }
+
+.logo .z { animation-delay: 0.1s; }
+.logo .a1 { animation-delay: 0.2s; }
+.logo .t { animation-delay: 0.3s; }
+.logo .a2 { animation-delay: 0.4s; }
+.logo .s { animation-delay: 0.5s; }
 
 .logo:hover .char {
     transform: translateY(-20px) scale(1.1);
@@ -166,6 +186,23 @@ nav a:hover {
     }
 }
 
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -176,15 +213,15 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0);
-    border-radius: 50%;
-    transition: transform 0.5s, border-radius 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
     z-index: 1000;
 }
 
-.menu-overlay.open {
-    transform: scale(1);
-    border-radius: 0;
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu-nav {
